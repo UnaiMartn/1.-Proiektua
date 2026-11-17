@@ -1,0 +1,501 @@
+
+html {
+    
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f2f0e8;
+    color: #26342e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.padre {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera */
+.header {
+    min-height: 500px;
+    padding: 20px 7%;
+    background: linear-gradient(rgba(20, 35, 30, .45), rgba(20, 35, 30, .65)), url("imagenes/IA-ko_argazkiak/Velocidadurbanajuntoalmuro.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    min-height: 65px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: #d8f178;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    font-size: 14px;
+}
+
+.nav a:hover, .social a:hover {
+    color: #d8f178;
+}
+
+.social {
+    font-size: 13px;
+}
+
+.texto-principal {
+    max-width: 570px;
+    margin: auto 0;
+    padding: 65px 0;
+}
+
+.texto-principal > p:first-child {
+    margin-bottom: 15px;
+    color: #d8f178;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.texto-principal h1 {
+    max-width: 600px;
+    margin-bottom: 18px;
+    font-size: 58px;
+}
+
+.texto-principal > p:last-of-type {
+    max-width: 430px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #d8f178;
+    color: #26342e;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background: white;
+}
+
+/* Categorías */
+.section {
+    padding: 55px 7%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+
+}
+
+.articulos {
+    flex: 2 1 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 15px;
+}
+
+.titulo {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+    font-size: 32px;
+}
+
+.descripcion {
+    flex: 1 1 100%;
+    margin: -8px 0 8px;
+    color: #68736b;
+    font-size: 14px;
+}
+
+.article {
+    flex: 1 1 28%;
+    min-width: 170px;
+    padding: 18px;
+    background: white;
+    border: 10px solid #dedfd5;
+}
+
+.foto-zapatilla {
+    width: 100%;
+    height: 300px;
+    flex: 0 0 300px;
+    overflow: hidden;
+}
+
+.article h3 {
+    margin-bottom: 9px;
+    font-size: 19px;
+}
+
+.article p {
+    margin-bottom: 15px;
+    color: #68736b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.article .boton {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+/* Información sobre la tienda */
+.nosotros {
+    padding: 45px 7%;
+    background: #d8f178;
+}
+
+.nosotros p:first-child {
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nosotros h2 {
+    margin-bottom: 12px;
+    font-size: 32px;
+}
+
+.nosotros p:last-child {
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Página del catálogo */
+.catalogo-header {
+    min-height: 340px;
+}
+
+.catalogo-header .texto-principal h1 {
+    font-size: 48px;
+}
+
+.catalogo-seccion {
+    padding: 40px 7%;
+    scroll-margin-top: 15px;
+}
+
+.catalogo-seccion:nth-child(even) {
+    background: #e5e7dc;
+}
+
+.catalogo-seccion h2 {
+    margin-bottom: 8px;
+    font-size: 29px;
+}
+
+.catalogo-seccion > p {
+    margin-bottom: 20px;
+    color: #68736b;
+    font-size: 14px;
+}
+
+.catalogo-articulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.producto {
+    flex: 1 1 250px;
+    max-width: 430px;
+}
+
+.producto .foto-zapatilla {
+    height: 300px;
+    flex-basis: 300px;
+}
+
+.producto p {
+    margin-bottom: 8px;
+}
+
+.producto .precio {
+    margin-top: 14px;
+    color: #425a37;
+    font-weight: bold;
+}
+
+/* Pie */
+.footer {
+    padding: 25px 7%;
+    background: #26342e;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.pie {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.pie a {
+    font-size: 13px;
+}
+
+.pie p {
+    flex: 1 1 100%;
+    color: #d8ded8;
+    font-size: 11px;
+}
+
+.foto-zapatilla img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-asfalto {
+    object-position: 80% center;
+}
+
+.foto-monte {
+    object-position: 0% center;
+}
+
+/* Zapatilak aukeratzeko gida */
+.gida-sarrera {
+    padding: 42px 7%;
+    background: #d8f178;
+}
+
+.gida-sarrera p {
+    max-width: 720px;
+    line-height: 1.6;
+}
+
+.gida-sarrera h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.gida-seccion {
+    padding: 38px 7%;
+}
+
+.gida-seccion:nth-of-type(even) {
+    background: #e5e7dc;
+}
+
+.gida-seccion h2 {
+    margin-bottom: 18px;
+    font-size: 27px;
+}
+
+.gida-puntuak {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.gida-puntua {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 220px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #dedfd5;
+}
+
+.gida-puntua h3 {
+    margin-bottom: 9px;
+}
+
+.gida-puntua p + p {
+    margin-top: 10px;
+}
+
+.gida-puntua p, .gida-seccion > p {
+    color: #68736b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.gida-seccion > p {
+    margin-bottom: 14px;
+}
+
+/* Adaptación a tablet y móvil, como en la plantilla de clase */
+@media all and (max-width: 800px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .header {
+        min-height: 470px;
+        padding-right: 6%;
+        padding-left: 6%;
+        background-position: 58% center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .nav {
+        order: 3;
+        flex: 1 1 100%;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 5px 0;
+        font-size: 12px;
+    }
+
+    .texto-principal h1 {
+        font-size: 43px;
+    }
+
+    .texto-principal > p:last-of-type {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 35px 6%;
+    }
+
+    .articulos {
+        flex-direction: column;
+    }
+
+    .titulo, .descripcion, .article {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .nosotros {
+        padding: 35px 6%;
+    }
+
+    .nosotros h2 {
+        font-size: 26px;
+    }
+
+    .catalogo-header {
+        min-height: 330px;
+    }
+
+    .catalogo-header .texto-principal h1 {
+        font-size: 38px;
+    }
+
+    .catalogo-seccion {
+        padding: 30px 6%;
+    }
+
+    .gida-sarrera, .gida-seccion {
+        padding: 30px 6%;
+    }
+
+    .catalogo-articulos {
+        flex-direction: column;
+    }
+
+    .producto {
+        max-width: none;
+        width: 100%;
+    }
+
+    .footer {
+        padding: 22px 6%;
+    }
+
+    .pie {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+/* Gidako irudiaren markoa */
+.gida-irudia {
+    width: 100%;
+    height: 210px;
+    margin-top: 18px;
+    padding: 7px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #000;
+}
+
+.gida-irudia img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media all and (max-width: 560px) {
+    .gida-irudia {
+        height: 190px;
+    }
+}
+
+
+
+
+
+
